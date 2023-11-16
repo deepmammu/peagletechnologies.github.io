@@ -1,0 +1,64 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+
+
+.image {
+    width: 200px;
+    /* Adjust the width of your image */
+    transform: rotateY(45deg) skew(-20deg);
+    transform-origin: 50% 50%;
+    transition: transform 0.5s;
+}
+
+.image:hover {
+    transform: rotateY(0) skew(0);
+}
+
+.eagle {
+    position: absolute;
+    bottom: 20%;
+    left: -100px;
+    width: 100px;
+    height: 50px;
+    background-color: #966F33;
+    /* Brown color for the body */
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    animation: flyEagle 5s linear infinite;
+}
+
+.wing {
+    position: absolute;
+    top: 20%;
+    left: -100px;
+    width: 100px;
+    height: 30px;
+    background-color: #E6E6E6;
+    /* Light gray color for the wings */
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    animation: flapWings 0.5s alternate infinite;
+}
+
+@keyframes flyEagle {
+    0% {
+        transform: translateX(-100%) rotate(0deg);
+    }
+
+    100% {
+        transform: translateX(100vw) rotate(360deg);
+    }
+}
+
+@keyframes flapWings {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(20deg);
+    }
+}
+
+.desktop {
+    font-size: 200px;
+}
